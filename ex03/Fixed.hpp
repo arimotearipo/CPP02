@@ -22,8 +22,8 @@ class Fixed
 		int		toInt(void) const;
 
 		// Additional for ex02
-		bool	operator>(/*The function will not change the value of the parameter hence the `const` keyword before the parameterconst*/ Fixed &right) const;
-		bool	operator<(const Fixed &right) const; // The const keyword after function declaration simply means the function will not modify any member variables of this class
+		bool	operator>(const Fixed &right) const;
+		bool	operator<(const Fixed &right) const;
 		bool	operator>=(const Fixed &right) const;
 		bool	operator<=(const Fixed &right) const;
 		bool	operator==(const Fixed &right) const;
@@ -38,7 +38,7 @@ class Fixed
 		Fixed	operator--(int n);
 		static	Fixed &min(Fixed &fixed1, Fixed &fixed2);
 		static	Fixed &max(Fixed &fixed1, Fixed &fixed2);
-		static	const Fixed	&min(const Fixed &fixed1, const Fixed &fixed2); // The const keyword before function declaration simply means the returned value cannot be modified later on
+		static	const Fixed	&min(const Fixed &fixed1, const Fixed &fixed2);
 		static	const Fixed	&max(const Fixed &fixed1, const Fixed &fixed2);
 	private:
 		int					fpnv;
