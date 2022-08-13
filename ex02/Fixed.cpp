@@ -31,7 +31,7 @@ Fixed::Fixed(const Fixed &fixed)
 	*this = fixed;
 }
 
-Fixed	&Fixed::operator=(const Fixed &fixed)
+Fixed &Fixed::operator=(Fixed const &fixed)
 {
 	cout << "Object instance assigned" << endl;
 	if (this != &fixed)
@@ -127,19 +127,19 @@ Fixed	Fixed::operator/(const Fixed &right) const
 
 // Increment
 
-Fixed	&Fixed::operator++(void)
+Fixed	&Fixed::operator++(void) //prefix
 {
 	(this->fpnv)++;
 	return (*this);
 }
 
-Fixed	&Fixed::operator--(void)
+Fixed	&Fixed::operator--(void) //prefix
 {
 	(this->fpnv)--;
 	return (*this);
 }
 
-Fixed	Fixed::operator++(int n)
+Fixed	Fixed::operator++(int n) //postfix
 {
 	if (n >= 0)
 	{
@@ -154,7 +154,7 @@ Fixed	Fixed::operator++(int n)
 	return (*this);
 }
 
-Fixed	Fixed::operator--(int n)
+Fixed	Fixed::operator--(int n) //postfix
 {
 	if (n >= 0)
 	{
