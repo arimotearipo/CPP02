@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <cmath>
+#include "colours.h"
 
 using std::ostream;
 

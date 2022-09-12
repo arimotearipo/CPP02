@@ -6,7 +6,7 @@
 /*   By: wwan-taj <wwan-taj@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 11:15:49 by nfernand          #+#    #+#             */
-/*   Updated: 2022/08/10 23:20:56 by wwan-taj         ###   ########.fr       */
+/*   Updated: 2022/09/12 11:43:06 by wwan-taj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,17 +34,17 @@ int	main()
 	//cout << "b is " << b << endl << endl;
 	//cout << "b is " << b / 2 << endl << endl;
 
+	cout << BBLU << "Testing * and / operators..." << RESET << endl;
 	Fixed b(10.2f);
 	Fixed c(2);
-
 	cout << "b is " << b << endl;
 	cout << "c is " << c << endl;
-	cout << "b * c is " << b * c << endl;
+	cout << "b * c is " << (b * c) << endl;
 	cout << "b / c is " << b / c << endl << endl;
 
+	cout << BBLU << "Testing + and - operators..." << RESET << endl;
 	Fixed d(10.2f);
 	Fixed e(1);
-
 	cout << "d is " << d << endl;
 	cout << "e is " << e << endl;
 	cout << "d + e is " << d + e << endl;
@@ -53,12 +53,11 @@ int	main()
 	Fixed f(1);
 	Fixed g(2);
 	Fixed h(1);
-
 	cout << "f is " << f << endl;
 	cout << "g is " << g << endl;
 	cout << "h is " << h << endl << endl;
 
-	cout << "== operator" << endl;
+	cout << BBLU "Testing == operator..." RESET << endl;
 	cout << "f is ";
 	if (f == g)
 		cout << "equal ";
@@ -72,25 +71,25 @@ int	main()
 	else
 		cout << "not equal ";
 	cout << "to h" << endl;
-	cout << "== operator" << endl << endl;
+	cout << BBLU "== operator" RESET << endl << endl;
 
-	cout << "!= operator" << endl;
+	cout << BBLU "Testing != operator..." RESET << endl;
 	cout << "f is ";
 	if (f != g)
-		cout << "equal ";
-	else
 		cout << "not equal ";
+	else
+		cout << "equal ";
 	cout << "to g" << endl;
 
 	cout << "f is ";
 	if (f != h)
-		cout << "equal ";
-	else
 		cout << "not equal ";
+	else
+		cout << "equal ";
 	cout << "to h" << endl;
-	cout << "!= operator" << endl << endl;
+	cout << BBLU "!= operator" RESET << endl << endl;
 
-	cout << "< operator" << endl;
+	cout << BBLU "Testing < operator..." RESET << endl;
 	cout << "f is ";
 	if (f < g)
 		cout << "less then ";
@@ -111,9 +110,9 @@ int	main()
 	else
 		cout << "not less then ";
 	cout << "h" << endl;
-	cout << "< operator" << endl << endl;
+	cout << BBLU "< operator" RESET << endl << endl;
 
-	cout << "> operator" << endl;
+	cout << BBLU "Testing > operator..." RESET << endl;
 	cout << "f is ";
 	if (f > g)
 		cout << "more then ";
@@ -134,53 +133,53 @@ int	main()
 	else
 		cout << "not more then ";
 	cout << "h" << endl;
-	cout << "> operator" << endl << endl;
+	cout << BBLU "> operator" RESET << endl << endl;
 
-	cout << ">= operator" << endl;
+	cout << BBLU "Testing >= operator..." RESET << endl;
 	cout << "f is ";
 	if (f >= g)
-		cout << "more then equals ";
+		cout << "more than or equals to ";
 	else
-		cout << "not more then equals ";
+		cout << "not more than or equals to ";
 	cout << "g" << endl;
 
 	cout << "f is ";
 	if (f >= h)
-		cout << "more then equals ";
+		cout << "more than or equals to ";
 	else
-		cout << "not more then equals ";
+		cout << "not more than or equals to ";
 	cout << "h" << endl;
 
 	cout << "g is ";
 	if (g >= h)
-		cout << "more then equals ";
+		cout << "more than or equals to ";
 	else
-		cout << "not more then equals ";
+		cout << "not more than or equals to";
 	cout << "h" << endl;
-	cout << ">= operator" << endl << endl;
+	cout << BBLU ">= operator" RESET << endl << endl;
 
-	cout << "<= operator" << endl;
+	cout << BBLU "Testing <= operator..." RESET << endl;
 	cout << "f is ";
 	if (f <= g)
-		cout << "less then equals ";
+		cout << "less than or equals to ";
 	else
-		cout << "not less then equals ";
+		cout << "not less than or equals to ";
 	cout << "g" << endl;
 
 	cout << "f is ";
 	if (f <= h)
-		cout << "less then equals ";
+		cout << "less than or equals to ";
 	else
-		cout << "not less then equals ";
+		cout << "not less than or equals to ";
 	cout << "h" << endl;
 
 	cout << "g is ";
 	if (g <= h)
-		cout << "less then equals ";
+		cout << "less than or equals to ";
 	else
-		cout << "not less then equals ";
+		cout << "not less than or equals to ";
 	cout << "h" << endl;
-	cout << "<= operator" << endl << endl;
+	cout << BBLU "<= operator" RESET << endl << endl;
 
 	Fixed i(13.2f);
 	Fixed j(20.29f);
