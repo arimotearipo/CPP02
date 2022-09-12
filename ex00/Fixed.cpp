@@ -31,6 +31,7 @@ Fixed	&Fixed::operator=(const Fixed &fixed)
 
 int	Fixed::getRawBits(void) const
 {
+	cout << "fpnv: " << this->fpnv << endl;
 	return (this->fpnv);
 }
 

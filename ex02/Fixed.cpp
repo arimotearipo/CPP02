@@ -17,7 +17,7 @@ Fixed::Fixed(const int in) : fpnv(0)
 Fixed::Fixed(float fpn) : fpnv(0)
 {
 	// cout << "The float " << fpn << " is converted to fixed point value by " << frac_bits << " bits" << endl;
-	this->fpnv = roundf(fpn * (1 << frac_bits));
+	this->fpnv = roundf(fpn * (2 << (this->frac_bits - 1)));
 }
 
 Fixed::~Fixed(void)

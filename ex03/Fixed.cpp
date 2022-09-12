@@ -114,16 +114,18 @@ Fixed	Fixed::operator-(const Fixed &right) const
 
 Fixed	Fixed::operator*(const Fixed &right) const
 {
-	Fixed temp;
-	temp = this->toFloat() * right.toFloat();
-	return temp;
+	Fixed val;
+
+	val = this->toFloat() * right.toFloat();
+	return (val);
 }
 
 Fixed	Fixed::operator/(const Fixed &right) const
 {
-	Fixed newfixed(*this);
-	newfixed.setRawBits(this->toFloat() / right.toFloat());
-	return (newfixed);
+	Fixed val;
+
+	val = this->toFloat() / right.toFloat();
+	return (val);
 }
 
 // Increment

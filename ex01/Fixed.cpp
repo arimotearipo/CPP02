@@ -17,7 +17,7 @@ Fixed::Fixed(const int in) : fpnv(0)
 Fixed::Fixed(float fpn) : fpnv(0)
 {
 	cout << "The float " << fpn << " is converted to fixed point value by " << frac_bits << " bits" << endl;
-	this->fpnv = roundf(fpn * (1 << frac_bits));
+	this->fpnv = roundf(fpn * (2 << (this->frac_bits - 1)));
 }
 
 Fixed::~Fixed(void)
@@ -52,13 +52,12 @@ void	Fixed::setRawBits(int const raw)
 
 float	Fixed::toFloat(void) const
 {
-	return ((float)fpnv / (float)(1 << frac_bits));
+	return ((float)this->fpnv / (2 << (this->frac_bits - 1)));
 }
 
 int Fixed::toInt() const
 {
-	// Basically just typecasting it to int
-	return (int)this->toFloat();
+	return (this->fpnv >> this->frac_bits);
 }
 
 ostream	&operator<<(ostream &COUT, Fixed const &FIXED)
